@@ -397,16 +397,20 @@ function FinalCTA() {
 function Footer() {
   return (
     <footer className="border-t border-border bg-background">
-      <div className="mx-auto max-w-6xl px-6 py-12 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-        <div className="text-center text-xs text-muted-foreground pb-8">Cnpj: 42.300.136/0001-67</div>
-        <nav className="flex items-center gap-6 text-sm text-muted-foreground">
+      <div className="mx-auto max-w-6xl px-6 py-12 flex flex-col items-center md:flex-row md:items-center md:justify-between gap-6">
+        <div className="text-center text-xs text-muted-foreground">
+          Cnpj: 42.300.136/0001-67
+        </div>
+        
+        <nav className="flex flex-wrap justify-center items-center gap-6 text-sm text-muted-foreground">
           {NAV.map((n) => (
             <a key={n.href} href={n.href} className="hover:text-foreground transition-colors">
               {n.label}
             </a>
           ))}
         </nav>
-        <div className="flex items-center gap-3 text-muted-foreground">
+        
+        <div className="flex items-center justify-center gap-3 text-muted-foreground">
           <a href="#" aria-label="Email" className="hover:text-foreground">
             <Mail className="size-4" />
           </a>
@@ -418,6 +422,7 @@ function Footer() {
           </a>
         </div>
       </div>
+      
       <div className="text-center text-xs text-muted-foreground pb-8">
         © 2026 Fábio Lacerda — Feito com cuidado
       </div>
